@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eunice Mapong Donfack — Business Analyst</title>
+<meta name="description" content="Business analyst specialising in requirement lifecycle ownership — accountable for a requirement's integrity from elicitation through UAT, go-live and early-life support.">
+<meta property="og:title" content="Eunice Mapong Donfack — Business Analyst">
+<meta property="og:description" content="I stay accountable for a requirement's integrity from the moment it's raised until it's proven correct in production.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="headshot.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23E4B44C'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='700' font-size='16' fill='%23131822' text-anchor='middle'%3EEM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#15171A; --bg-2:#1A1D21; --surface:#1E2227; --raised:#252A30;
+  --ink:#E9EAEC; --muted:#A3AAB3; --faint:#767D86;
+  --rule:#2C3137; --accent:#E4B44C; --accent-ink:#15171A; --accent-soft:#2B2718;
+  --display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+:root[data-theme="light"]{
+  --bg:#FAFAF9; --bg-2:#F1F1EF; --surface:#FFFFFF; --raised:#FFFFFF;
+  --ink:#1A1C1F; --muted:#555B62; --faint:#868C94;
+  --rule:#E1E2E0; --accent:#8A6410; --accent-ink:#FFFFFF; --accent-soft:#F7F0DE;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-size:15.5px; line-height:1.6; -webkit-font-smoothing:antialiased}
+.wrap{max-width:68rem; margin:0 auto; padding:0 1.5rem}
+.narrow{max-width:46rem}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2{font-family:var(--display); font-weight:600; line-height:1.14; margin:0; letter-spacing:-.01em}
+h3,h4{font-family:var(--sans); font-weight:600; margin:0; line-height:1.3}
+p{margin:0 0 .9rem}
+.gold{color:var(--accent)}
+.eyebrow{font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); margin:0 0 1rem}
+.sec-label{font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--faint); margin:0 0 .7rem}
+
+/* nav */
+nav{position:sticky; top:0; z-index:30; background:var(--bg); border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex; align-items:center; gap:1rem; height:62px}
+.brand{display:flex; align-items:center; gap:.6rem; color:var(--ink); text-decoration:none}
+.brand:hover{text-decoration:none}
+.mark{width:34px; height:34px; border-radius:8px; background:var(--accent); color:var(--accent-ink);
+  font-family:var(--display); font-weight:700; font-size:.85rem;
+  display:flex; align-items:center; justify-content:center; flex:none}
+.brand b{display:block; font-size:.88rem; font-weight:600; line-height:1.25}
+.brand small{display:block; font-size:.72rem; color:var(--faint); line-height:1.25}
+.navlinks{display:flex; align-items:center; gap:.15rem; margin-left:auto; font-size:.83rem}
+.navlinks a{color:var(--muted); padding:.4rem .7rem; border-radius:999px; text-decoration:none}
+.navlinks a:hover{color:var(--ink); background:var(--bg-2); text-decoration:none}
+.pill{margin-left:.4rem; background:var(--accent)!important; color:var(--accent-ink)!important;
+  font-weight:600; padding:.45rem 1rem!important}
+.pill:hover{opacity:.9}
+#themer{margin-left:.35rem; background:none; border:1px solid var(--rule); color:var(--muted);
+  width:32px; height:32px; border-radius:999px; cursor:pointer; font-size:.9rem; line-height:1; flex:none}
+#themer:hover{color:var(--ink); border-color:var(--faint)}
+@media (max-width:820px){ .navlinks a:not(.pill){display:none} .brand small{display:none} }
+
+/* hero */
+.hero{background:var(--bg-2); border-bottom:1px solid var(--rule); padding:3.4rem 0 2.6rem}
+.hero-grid{display:grid; grid-template-columns:1.35fr .65fr; gap:2.5rem; align-items:center}
+.hero h1{font-size:clamp(2rem,4.6vw,3.15rem)}
+.hero .lede{margin-top:1.35rem; color:var(--muted); font-size:1rem; max-width:34rem}
+.cta{display:flex; flex-wrap:wrap; gap:.65rem; margin-top:1.7rem}
+.btn{display:inline-block; font-size:.87rem; font-weight:600; padding:.62rem 1.25rem;
+  border-radius:999px; border:1px solid var(--rule); color:var(--ink); background:var(--surface);
+  text-decoration:none}
+.btn:hover{text-decoration:none; border-color:var(--faint)}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.btn.primary:hover{opacity:.9}
+.portrait{position:relative; aspect-ratio:4/5; border-radius:14px; overflow:hidden;
+  background:var(--surface); border:1px solid var(--rule)}
+.portrait img{width:100%; height:100%; object-fit:cover; display:block}
+.portrait::after{content:""; position:absolute; inset:0; pointer-events:none;
+  box-shadow:inset 0 -70px 90px -50px rgba(21,23,26,.75)}
+:root[data-theme="light"] .portrait::after{box-shadow:none}
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:1fr; gap:1.8rem}
+  .portrait{max-width:14rem; order:-1}
+}
+
+/* stats */
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(11rem,1fr)); gap:1px;
+  background:var(--rule); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
+.stats div{background:var(--bg); padding:1.15rem 1.4rem}
+.stats .n{font-family:var(--display); font-size:1.55rem; font-weight:600; display:block; line-height:1.15}
+.stats .k{font-size:.78rem; color:var(--muted); margin-top:.2rem; display:block}
+.stats .src{font-size:.7rem; color:var(--faint); margin-top:.25rem; display:block}
+
+/* sections */
+section{padding:3.1rem 0}
+section + section{border-top:1px solid var(--rule)}
+h2.sec{font-size:clamp(1.5rem,3vw,1.95rem); margin-bottom:.6rem}
+
+/* approach cards */
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1.1rem; margin-top:1.7rem}
+.card{background:var(--surface); border:1px solid var(--rule); border-radius:12px; padding:1.35rem}
+.card .num{font-family:var(--display); font-size:.9rem; color:var(--accent); font-weight:700;
+  display:block; margin-bottom:.55rem}
+.card h3{font-size:1rem; margin-bottom:.5rem}
+.card p{font-size:.9rem; color:var(--muted); margin:0}
+
+/* case studies */
+.cs{background:var(--surface); border:1px solid var(--rule); border-radius:14px;
+  padding:1.9rem; margin-top:1.5rem}
+@media (max-width:640px){ .cs{padding:1.3rem} }
+.tags{display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:.9rem}
+.tag{font-size:.71rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--accent); background:var(--accent-soft); border-radius:999px; padding:.24rem .7rem}
+.cs h2{font-size:clamp(1.28rem,2.6vw,1.65rem)}
+.cs-meta{font-size:.82rem; color:var(--faint); margin:.6rem 0 0; line-height:1.55}
+.cs-meta b{color:var(--muted); font-weight:600}
+.cs-body{margin-top:1.5rem; max-width:44rem}
+.cs-body h3{font-size:.78rem; letter-spacing:.13em; text-transform:uppercase; color:var(--accent);
+  margin:1.7rem 0 .6rem}
+.cs-body h3:first-child{margin-top:0}
+.cs-body p{font-size:.95rem}
+.pull{border-left:3px solid var(--accent); background:var(--bg-2); border-radius:0 8px 8px 0;
+  padding:1rem 1.1rem; margin:1.1rem 0}
+.pull p{margin:0 0 .7rem; font-size:.95rem}
+.pull p:last-child{margin:0}
+.mini{display:flex; flex-wrap:wrap; gap:1.6rem; margin:1.6rem 0 0; padding-top:1.2rem;
+  border-top:1px solid var(--rule)}
+.mini div{min-width:9rem}
+.mini .n{font-family:var(--display); font-size:1.3rem; font-weight:600; display:block; line-height:1.2}
+.mini .k{font-size:.76rem; color:var(--faint)}
+.tools{font-size:.82rem; color:var(--muted); margin-top:1.3rem; padding-top:1.1rem;
+  border-top:1px solid var(--rule); line-height:1.75}
+.tools b{display:block; color:var(--ink); font-size:.72rem; letter-spacing:.13em;
+  text-transform:uppercase; margin-bottom:.4rem}
+
+/* skills */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); gap:1.6rem 2rem; margin-top:1.7rem}
+.grid h3{font-size:.76rem; letter-spacing:.13em; text-transform:uppercase; color:var(--accent);
+  margin-bottom:.6rem}
+.grid ul{margin:0; padding-left:1.05rem; font-size:.88rem; color:var(--muted)}
+.grid li{margin-bottom:.28rem}
+
+/* contact */
+.contact-box{background:var(--surface); border:1px solid var(--rule); border-radius:14px;
+  padding:1.9rem; margin-top:1.4rem}
+.lines{margin-top:1.3rem; font-size:.92rem}
+.lines div{display:flex; gap:.9rem; margin-bottom:.55rem; flex-wrap:wrap}
+.lines span{color:var(--faint); font-size:.78rem; letter-spacing:.06em; text-transform:uppercase;
+  min-width:5.5rem; padding-top:.15rem}
+.lines a{word-break:break-word}
+
+footer{border-top:1px solid var(--rule); padding:1.6rem 0 2.6rem; font-size:.78rem; color:var(--faint)}
+
+.todo{background:#4A3A0C; color:#F4D98A; border:1px dashed #A98A2E; border-radius:4px;
+  padding:.1rem .4rem; font-size:.82rem}
+:root[data-theme="light"] .todo{background:#FFF3CD; color:#6B4E00; border-color:#C9A227}
+
+@media print{
+  nav,.cta,.todo,#themer{display:none}
+  .portrait{max-width:5.5cm; border:0}
+  .hero-grid{grid-template-columns:1fr 5.5cm}
+  body{background:#fff; color:#000; font-size:10.5pt}
+  .cs,.card,.contact-box{border:0; padding:0; background:#fff}
+  section{padding:.8rem 0; border:0}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark">EM</span>
+      <span><b>Eunice Mapong Donfack</b><small>Business Analyst</small></span>
+    </a>
+    <div class="navlinks">
+      <a href="#approach">Approach</a>
+      <a href="#work">Case studies</a>
+      <a href="#skills">Skills</a>
+      <button id="themer" type="button" aria-label="Switch between light and dark">◐</button>
+      <a class="pill" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Elicitation → Specification → UAT → Production</p>
+      <h1>A requirement isn't done when the spec is <span class="gold">signed off</span>. It's done when it's <span class="gold">correct in production</span>.</h1>
+      <p class="lede">
+        Bilingual business analyst (FR/EN) in Canada, with a software development background.
+        I stay accountable for a requirement's integrity from the moment it's raised until it's
+        proven correct in production — across insurance, public sector and IT services delivery.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#work">Read the case studies</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="headshot.jpg" width="720" height="900"
+           alt="Eunice Mapong Donfack, business analyst" fetchpriority="high">
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div>
+    <span class="n">25,000+</span>
+    <span class="k">agents and brokers on the platform migrated</span>
+    <span class="src">Insurance modernisation</span>
+  </div>
+  <div>
+    <span class="n">100+</span>
+    <span class="k">user stories clarified before build</span>
+    <span class="src">Insurance modernisation</span>
+  </div>
+  <div>
+    <span class="n">10 days → 2 hours</span>
+    <span class="k">to produce awards results and rankings</span>
+    <span class="src">School excellence awards</span>
+  </div>
+  <div>
+    <span class="n">200+</span>
+    <span class="k">consultant profiles standardised</span>
+    <span class="src">AI-enabled profile management</span>
+  </div>
+</div>
+
+<section id="approach">
+  <div class="wrap">
+    <p class="sec-label">Approach</p>
+    <h2 class="sec">Three things follow from that one commitment</h2>
+    <p class="narrow" style="color:var(--muted)">
+      Requirement lifecycle ownership isn't a list of activities I happen to perform. It's one
+      position, and everything below is a consequence of holding it.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>The stated requirement is rarely the real one</h3>
+        <p>
+          “Automate the process” or “modernise the platform” describes a symptom. Finding what sits
+          underneath means going past what stakeholders say in a workshop — observing the work as
+          it's actually done, reading the artefacts people produce, and noticing the gap between the
+          process as described and the process as practised.
+        </p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>A development background changes what a spec can account for</h3>
+        <p>
+          Knowing how systems are built means functional specifications can address how each
+          deliverable has to behave — dependencies between features, what an endpoint returns, which
+          legacy behaviours must survive a migration untouched — at the analyst's altitude, without
+          pretending to the architect's.
+        </p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>A requirement isn't done at handoff</h3>
+        <p>
+          Staying involved through UAT design, go-live and early life is where the gap between what
+          was specified and what was actually built becomes visible. Sometimes that means recognising
+          a reported bug as a requirements defect. Sometimes it means catching, in production, a
+          limit nobody specified. Either way, being there is the point.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="sec-label">Case studies</p>
+    <h2 class="sec">Selected work</h2>
+    <p class="narrow" style="color:var(--muted)">
+      Two projects in depth rather than a list of many. More are being added.
+    </p>
+
+    <article class="cs">
+      <div class="tags"><span class="tag">Insurance</span><span class="tag">Cloud migration</span><span class="tag">Agile delivery</span></div>
+      <h2>Keeping 25,000 users' behaviour intact through a cloud migration</h2>
+      <p class="cs-meta">
+        <b>LGS, an IBM company</b> · Client: a Canadian insurance carrier<br>
+        IT Consultant — Business Analysis · 2023–present
+      </p>
+
+      <div class="cs-body">
+        <h3>The situation</h3>
+        <p>
+          A digital transformation project was replacing a legacy VB.NET insurance application with
+          a cloud-native web platform on Microsoft Azure. More than 25,000 agents and brokers depended
+          on the old system. It processed requests slowly, cost a great deal to maintain, and —
+          because it was installed workstation by workstation — couldn't be reached remotely.
+        </p>
+
+        <h3>What was asked for, and what was actually needed</h3>
+        <p>
+          The project was framed as a modernisation: better performance, accessibility,
+          maintainability and operational continuity.
+        </p>
+        <p>
+          The harder requirement sat underneath it. During insurance product illustrations, the legacy
+          application returned specific figures and responses to the agent mid-quotation, and those
+          behaviours had to survive the move exactly — a migration that hit every stated objective
+          while changing what an agent saw on screen would have failed. So the real work wasn't
+          specifying the new platform. It was establishing precisely what the old one did, including
+          behaviour that had never been written down and existed only in code that was being retired.
+        </p>
+
+        <h3>Finding the real problem</h3>
+        <p>
+          Over 100 user stories were analysed and clarified to surface the business rules, acceptance
+          criteria, cross-feature dependencies and critical behaviours a safe migration depended on.
+          That analysis routinely turned up ambiguities, inconsistencies and non-conformities in
+          stories already accepted into the backlog — each one a defect that would otherwise have been
+          discovered in development or, worse, after release.
+        </p>
+        <div class="pull">
+          <p>
+            One example shows the pattern. Analysing a single user story surfaced a dependency on an
+            API that hadn't been finished yet. Nothing in the story said so; the dependency only became
+            visible once the story's functional behaviour was traced through to the endpoints it would
+            call. Left alone, the story would have entered a sprint that couldn't complete it. Raised
+            early, it triggered a re-prioritisation and direct coordination with the team responsible
+            for the API — and the sequencing problem was solved before it cost anyone a sprint.
+          </p>
+        </div>
+
+        <h3>Making the legacy behaviour durable</h3>
+        <p>
+          The existing system's flows, interactions and sequences were modelled explicitly, so the
+          behaviours to be preserved existed as documentation rather than as tribal knowledge or as a
+          binary nobody wanted to open. Functional documentation was maintained using a
+          documentation-as-code (Markdown) approach, keeping requirements, decisions and system behaviour
+          consistent across delivery teams as the platform changed underneath them.
+        </p>
+        <p>
+          Working with business analysts, developers, the solution architect and the Product Owner,
+          functional needs were translated into implementable components aligned to the target
+          architecture — and completed user stories were walked through with the delivery teams to
+          confirm everyone was building against the same understanding.
+        </p>
+
+        <h3>Protecting the outcome</h3>
+        <p>
+          Ambiguity was treated as something to remove before it reached code, not something to
+          discover during testing. Every user story assigned to me went through the same sequence: a
+          short kick-off for that story alone with the subject-matter expert or customer-side business
+          analyst who could actually answer for it, to pin down what the story meant and what its
+          acceptance criteria had to be; an update to the story reflecting what that conversation
+          settled; and a check that it still served the sprint goal, which in turn traced back to a
+          business requirement. Only then did implementation start — in my case including the
+          development work itself.
+        </p>
+        <p>
+          Around that: backlog prioritisation, estimation and refinement supported by analysis of
+          business value, functional complexity and delivery dependencies; API and microservice
+          behaviour validated with Postman; validation workshops and UAT attended and documented, with
+          discrepancies tracked through to resolution.
+        </p>
+
+        <h3>After go-live</h3>
+        <p>
+          Involvement continued past deployment: tracking defects raised in production through to
+          resolution, and making sure the team as a whole handled them properly rather than letting
+          fixes happen ad hoc.
+        </p>
+
+        <div class="mini">
+          <div><span class="n">10+</span><span class="k">strategic features migrated</span></div>
+          <div><span class="n">100+</span><span class="k">user stories clarified</span></div>
+          <div><span class="n">25,000+</span><span class="k">agents and brokers served</span></div>
+        </div>
+
+        <p class="tools">
+          <b>Approach &amp; tools</b>
+          Functional analysis · User story clarification &amp; acceptance criteria · Business rules ·
+          Cross-feature and API dependency analysis · Legacy behaviour modelling (flow &amp; sequence) ·
+          Requirements traceability · Documentation-as-code · Backlog refinement &amp; prioritisation ·
+          UAT · Azure, .NET Core, microservices, SQL Server, Postman, Azure DevOps, Draw.io, GitHub,
+          Agile/Scrum
+        </p>
+      </div>
+    </article>
+
+    <article class="cs">
+      <div class="tags"><span class="tag">Non-profit</span><span class="tag">Process automation</span><span class="tag">Full lifecycle</span></div>
+      <h2>Turning a ten-day paper process into a two-hour one</h2>
+      <p class="cs-meta">
+        <b>Sécurité Électronique (SECEL) Sarl</b> · Client: an international child-welfare NGO<br>
+        Business/Functional Analyst · 2018
+      </p>
+
+      <div class="cs-body">
+        <h3>The situation</h3>
+        <p>
+          The NGO ran an academic excellence award programme across its associative homes. Eligibility
+          combined two things: a student's membership in one of the homes, and their grades in subjects
+          selected and pre-defined by the NGO. The whole process lived on paper and in Excel. Producing
+          the eligibility lists and rankings took the award committee more than ten days.
+        </p>
+
+        <h3>What was asked for, and what was actually needed</h3>
+        <p>The request was to automate the award process.</p>
+        <p>
+          The rules that process depended on turned out not to exist in any single agreed form. Some
+          were written in files; others were carried verbally by the people who had always run the
+          programme. Automating that as-is would have hard-coded whichever version happened to get
+          captured. The first deliverable wasn't software — it was an agreed statement of the rules
+          themselves.
+        </p>
+
+        <h3>Finding the real problem</h3>
+        <p>
+          Elicitation combined workshops and interviews with direct observation of users doing the
+          work, and analysis of the paper and Excel artefacts they produced.
+        </p>
+        <div class="pull">
+          <p>
+            Observation caught what the interviews hadn't described: the same student information was
+            being recorded in several different files, updated by hand whenever something changed, with
+            no version control over any of it. Nobody had raised this as a problem — it was simply how
+            the work was done. But it meant information was regularly omitted, lost, or quietly
+            ignored, and it explained why producing a defensible ranking took ten days.
+          </p>
+          <p>
+            The stated problem was slowness. The real problem was that no one could tell which copy of
+            a student's record was the true one.
+          </p>
+        </div>
+
+        <h3>Making the rules durable</h3>
+        <p>
+          The eligibility rules, data sources, validation steps and ranking criteria were translated
+          into functional requirements, business rules and acceptance criteria — each traceable forward
+          into a test case and a validation. The functional file, user stories and detailed
+          specifications carried that traceability end to end. Business processes were modelled in UML
+          to make system interactions explicit, and the functional architecture was designed alongside
+          the technical team so that what was specified and what got built stayed the same thing.
+        </p>
+
+        <h3>Protecting the outcome</h3>
+        <p>
+          A test plan of functional and integration cases was structured against the acceptance
+          criteria, and UAT was coordinated end to end, with results, anomalies and corrections tracked
+          to closure.
+        </p>
+        <p>
+          One of the anomalies stood out more. The client logged a defect: the generated award
+          certificates didn't show complete student details. Investigating it showed the cause wasn't
+          in the code — the requirements for the generated PDF award documents had never been captured
+          completely. That made it a requirements defect, not a bug, and the two are fixed differently.
+        </p>
+        <p>
+          I raised this, brought the stakeholders together, and we worked through what the correction
+          actually involved: what it affected, how it should be prioritised against the rest of the
+          backlog, and how it would be introduced in the coming sprint.
+        </p>
+        <p>
+          Three end users were then trained through demonstrations and written material, so the system
+          was handed to people who could operate it rather than to a deployment date.
+        </p>
+
+        <h3>After go-live</h3>
+        <p>
+          Support continued through the first live award cycle, and real use surfaced something no test
+          had. Past a certain volume of student records entered in a single session, the system slowed
+          noticeably. The symptoms showed up as operational workarounds before they showed up as a
+          ticket — users waiting to register records, and the number of people connected at once being
+          reduced to keep things moving. Investigation traced the cause to the architecture rather than
+          to how the system was being used, which meant no amount of tuning or user guidance would fix
+          it.
+        </p>
+        <p>
+          That finding was scoped into a second phase of the project. It also changed how I elicit:
+          expected volumes, concurrency and performance thresholds are now drawn out explicitly rather
+          than left to emerge in production.
+        </p>
+
+        <div class="mini">
+          <div><span class="n">10 days → 2 hours</span><span class="k">to produce results and rankings</span></div>
+        </div>
+
+        <p style="margin-top:1.1rem; font-size:.95rem">
+          The awards committee worked from one reliable source of student data instead of reconciling
+          several uncontrolled copies of it — and every eligible student's ranking could be traced back
+          to the inputs that produced it, so the committee could see why a student placed where they
+          did rather than take the list on trust.
+        </p>
+
+        <p class="tools">
+          <b>Approach &amp; tools</b>
+          Elicitation (workshops, interviews, user observation, document analysis) · Business rules ·
+          Functional specifications &amp; user stories · UML modelling · Requirements traceability ·
+          Functional and integration test design · UAT coordination · Anomaly diagnosis and
+          follow-through · Post-deployment support · End-user training · C#, SQL Server, Agile/Scrum
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="sec-label">Skills &amp; tooling</p>
+    <h2 class="sec">What I produce, and what I work in</h2>
+    <div class="grid">
+      <div>
+        <h3>Elicitation &amp; analysis</h3>
+        <ul>
+          <li>Stakeholder workshops and interviews</li>
+          <li>User observation and document analysis</li>
+          <li>AS-IS / TO-BE process analysis</li>
+          <li>Gap analysis</li>
+          <li>Business rules definition</li>
+          <li>RFP and requirements-document analysis</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Specification</h3>
+        <ul>
+          <li>Functional specifications and functional files</li>
+          <li>User stories and acceptance criteria</li>
+          <li>UML and BPMN modelling</li>
+          <li>Flow, interaction and sequence diagrams</li>
+          <li>Requirements traceability</li>
+          <li>Documentation-as-code</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Validation &amp; delivery</h3>
+        <ul>
+          <li>Functional and integration test design</li>
+          <li>UAT planning and coordination</li>
+          <li>Anomaly documentation and follow-through</li>
+          <li>Change request management</li>
+          <li>Go-live and early-life support</li>
+          <li>End-user training and knowledge transfer</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ways of working</h3>
+        <ul>
+          <li>Agile / Scrum, backlog refinement</li>
+          <li>Azure DevOps, Jira</li>
+          <li>ITIL 4 process improvement</li>
+          <li>Bilingual delivery (French / English)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Technical fluency</h3>
+        <ul>
+          <li>C#, .NET Core, VB.NET</li>
+          <li>SQL Server</li>
+          <li>REST APIs, microservices, Postman</li>
+          <li>Microsoft Azure</li>
+          <li>Git / GitHub, Draw.io</li>
+          <li>HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="sec-label">Contact</p>
+    <h2 class="sec">Open to business analysis roles</h2>
+    <div class="contact-box narrow">
+      <p style="color:var(--muted); margin:0">
+        Based in Canada, working in English and French. If you're hiring for a role where requirements
+        have to survive contact with production, I'd be glad to talk.
+      </p>
+      <div class="lines">
+        <div><span>Email</span> <a href="mailto:nice55kloe@gmail.com">nice55kloe@gmail.com</a></div>
+        <div><span>LinkedIn</span> <a href="https://www.linkedin.com/in/eunice-mapong-business-analysis-analyste-affaires-transformation-digitale-modernization" target="_blank" rel="noopener">linkedin.com/in/eunice-mapong</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Eunice Mapong Donfack · Built with plain HTML and CSS.</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themer');
+  var saved=null;
+  try{ saved=localStorage.getItem('theme'); }catch(e){}
+  if(saved) root.setAttribute('data-theme',saved);
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||'dark';  // dark is the default
+    var next=cur==='light'?'dark':'light';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem('theme',next); }catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
