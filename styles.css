@@ -1,14 +1,22 @@
+/* Palette: charcoal #292929 · cream #F4EFE7 · gold #C99A4A.
+   --accent is gold used as TEXT; --accent-fill is gold used as a BACKGROUND.
+   They differ in light mode only: #C99A4A on cream is 2.2:1 and unreadable as
+   text, so light mode darkens the text gold to #7E5C1C (5.3:1) while fills keep
+   the true palette gold with charcoal on top (5.7:1). Every pairing used on the
+   page clears 4.5:1 in both themes. */
 :root{
-  --bg:#15171A; --bg-2:#1A1D21; --surface:#1E2227; --raised:#252A30;
-  --ink:#E9EAEC; --muted:#A3AAB3; --faint:#767D86;
-  --rule:#2C3137; --accent:#E4B44C; --accent-ink:#15171A; --accent-soft:#2B2718;
+  --bg:#292929; --bg-2:#232323; --surface:#313131; --raised:#3A3A3A;
+  --ink:#F4EFE7; --muted:#B5AFA4; --faint:#968F83;
+  --rule:#403E3B;
+  --accent:#C99A4A; --accent-fill:#C99A4A; --accent-ink:#292929; --accent-soft:#352D1E;
   --display:"Playfair Display",Georgia,"Times New Roman",serif;
   --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 :root[data-theme="light"]{
-  --bg:#FAFAF9; --bg-2:#F1F1EF; --surface:#FFFFFF; --raised:#FFFFFF;
-  --ink:#1A1C1F; --muted:#555B62; --faint:#868C94;
-  --rule:#E1E2E0; --accent:#8A6410; --accent-ink:#FFFFFF; --accent-soft:#F7F0DE;
+  --bg:#F4EFE7; --bg-2:#EAE2D5; --surface:#FCFAF6; --raised:#FFFFFF;
+  --ink:#292929; --muted:#57524A; --faint:#6E6960;
+  --rule:#DCD3C2;
+  --accent:#7E5C1C; --accent-fill:#C99A4A; --accent-ink:#292929; --accent-soft:#F0E5CE;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -45,7 +53,7 @@ nav{position:sticky; top:0; z-index:30; background:var(--bg); border-bottom:1px 
 nav .wrap{display:flex; align-items:center; gap:1rem; height:62px}
 .brand{display:flex; align-items:center; gap:.6rem; color:var(--ink); text-decoration:none}
 .brand:hover{text-decoration:none}
-.mark{width:34px; height:34px; border-radius:8px; background:var(--accent); color:var(--accent-ink);
+.mark{width:34px; height:34px; border-radius:8px; background:var(--accent-fill); color:var(--accent-ink);
   font-family:var(--display); font-weight:700; font-size:.85rem;
   display:flex; align-items:center; justify-content:center; flex:none}
 .brand b{display:block; font-size:.88rem; font-weight:600; line-height:1.25}
@@ -53,7 +61,7 @@ nav .wrap{display:flex; align-items:center; gap:1rem; height:62px}
 .navlinks{display:flex; align-items:center; gap:.15rem; margin-left:auto; font-size:.83rem}
 .navlinks a{color:var(--muted); padding:.4rem .7rem; border-radius:999px; text-decoration:none}
 .navlinks a:hover{color:var(--ink); background:var(--bg-2); text-decoration:none}
-.pill{margin-left:.4rem; background:var(--accent)!important; color:var(--accent-ink)!important;
+.pill{margin-left:.4rem; background:var(--accent-fill)!important; color:var(--accent-ink)!important;
   font-weight:600; padding:.45rem 1rem!important}
 .pill:hover{opacity:.9}
 #themer{margin-left:.35rem; background:none; border:1px solid var(--rule); color:var(--muted);
@@ -71,13 +79,13 @@ nav .wrap{display:flex; align-items:center; gap:1rem; height:62px}
   border-radius:999px; border:1px solid var(--rule); color:var(--ink); background:var(--surface);
   text-decoration:none}
 .btn:hover{text-decoration:none; border-color:var(--faint)}
-.btn.primary{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.btn.primary{background:var(--accent-fill); border-color:var(--accent-fill); color:var(--accent-ink)}
 .btn.primary:hover{opacity:.9}
 .portrait{position:relative; aspect-ratio:4/5; border-radius:14px; overflow:hidden;
   background:var(--surface); border:1px solid var(--rule)}
 .portrait img{width:100%; height:100%; object-fit:cover; display:block}
 .portrait::after{content:""; position:absolute; inset:0; pointer-events:none;
-  box-shadow:inset 0 -70px 90px -50px rgba(21,23,26,.75)}
+  box-shadow:inset 0 -70px 90px -50px rgba(41,41,41,.78)}
 :root[data-theme="light"] .portrait::after{box-shadow:none}
 @media (max-width:820px){
   .hero-grid{grid-template-columns:1fr; gap:1.8rem}
