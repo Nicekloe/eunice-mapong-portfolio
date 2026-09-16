@@ -26,7 +26,7 @@
     </a>
     <div class="navlinks">
       <a href="#approach">Approach</a>
-      <a href="#work">Case studies</a>
+      <a href="#work">Projects</a>
       <a href="#skills">Skills</a>
       <button id="themer" type="button" aria-label="Switch between light and dark">◐</button>
       <a class="pill" href="#contact">Get in touch</a>
@@ -45,7 +45,7 @@
         proven correct in production — across insurance, public sector and IT services delivery.
       </p>
       <div class="cta">
-        <a class="btn primary" href="#work">Read the case studies</a>
+        <a class="btn primary" href="#work">See the projects</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
     </div>
@@ -124,12 +124,11 @@
 
 <section id="work">
   <div class="wrap">
-    <p class="sec-label">Case studies</p>
+    <p class="sec-label">Projects</p>
     <h2 class="sec">Selected work</h2>
     <p class="narrow" style="color:var(--muted)">
-      Two projects where I owned the requirement from elicitation through to production. Three more —
-      an AI-assisted profile matching framework, an ITIL 4 process realignment, and a municipal IT
-      master plan — are on the second page.
+      Two projects where I owned the requirement from elicitation through to production. Each is a
+      short brief — open “Read the full story” for the detail. Three more are on the second page.
     </p>
 
     <article class="cs">
@@ -139,8 +138,25 @@
         <b>LGS, an IBM company</b> · Client: a Canadian insurance carrier<br>
         IT Consultant — Business Analysis · 2023–present
       </p>
+      <div class="mini top">
+          <div><span class="n">10+</span><span class="k">strategic features migrated</span></div>
+          <div><span class="n">100+</span><span class="k">user stories clarified</span></div>
+          <div><span class="n">25,000+</span><span class="k">agents and brokers served</span></div>
+        </div>
+      <dl class="brief">
+        <dt>The problem</dt>
+        <dd>A legacy VB.NET insurance application used by 25,000+ agents and brokers was moving to Azure. The figures it returned to an agent mid-quotation had to survive the move exactly — behaviour that existed only in the code being retired.</dd>
+        <dt>What I found</dt>
+        <dd>Tracing one user story's behaviour through to the endpoints it would call exposed a dependency on an unfinished API. Nothing in the story said so; left alone it would have entered a sprint that couldn't complete it.</dd>
+        <dt>What I did</dt>
+        <dd>Gave every story assigned to me its own kick-off with the SME or customer-side analyst who could answer for it, so ambiguity was removed before code rather than found in testing. Modelled the legacy flows and sequences so the behaviour to preserve lived as documentation.</dd>
+        <dt>Result</dt>
+        <dd>10+ strategic features migrated with quotation behaviour intact. Involvement continued past deployment, tracking production defects through to resolution.</dd>
+      </dl>
 
-      <div class="cs-body">
+      <details class="full">
+        <summary>Read the full story</summary>
+        <div class="cs-body">
         <h3>The situation</h3>
         <p>
           A digital transformation project was replacing a legacy VB.NET insurance application with
@@ -221,14 +237,10 @@
           resolution, and making sure the team as a whole handled them properly rather than letting
           fixes happen ad hoc.
         </p>
-
-        <div class="mini">
-          <div><span class="n">10+</span><span class="k">strategic features migrated</span></div>
-          <div><span class="n">100+</span><span class="k">user stories clarified</span></div>
-          <div><span class="n">25,000+</span><span class="k">agents and brokers served</span></div>
         </div>
+      </details>
 
-        <p class="tools">
+      <p class="tools">
           <b>Approach &amp; tools</b>
           Functional analysis · User story clarification &amp; acceptance criteria · Business rules ·
           Cross-feature and API dependency analysis · Legacy behaviour modelling (flow &amp; sequence) ·
@@ -236,7 +248,6 @@
           UAT · Azure, .NET Core, microservices, SQL Server, Postman, Azure DevOps, Draw.io, GitHub,
           Agile/Scrum
         </p>
-      </div>
     </article>
 
     <article class="cs">
@@ -246,8 +257,23 @@
         <b>Sécurité Électronique (SECEL) Sarl</b> · Client: an international child-welfare NGO<br>
         Business/Functional Analyst · 2018
       </p>
+      <div class="mini top">
+          <div><span class="n">10 days → 2 hours</span><span class="k">to produce results and rankings</span></div>
+        </div>
+      <dl class="brief">
+        <dt>The problem</dt>
+        <dd>An NGO's academic excellence awards ran on paper and Excel. Producing eligibility lists and rankings took the award committee more than ten days, and the rules existed partly in files and partly in people's heads.</dd>
+        <dt>What I found</dt>
+        <dd>Observing the work rather than only interviewing showed the same student data living in several hand-updated files with no version control. The stated problem was slowness; the real one was that nobody could tell which copy was true.</dd>
+        <dt>What I did</dt>
+        <dd>Turned the eligibility and ranking rules into documented requirements traceable to tests. During UAT a reported defect turned out to be a requirements gap — the PDF certificate requirements had never been captured — so I raised it and scoped the correction with stakeholders.</dd>
+        <dt>Result</dt>
+        <dd>Ten days down to about two hours, one reliable source of student data, every ranking traceable to its inputs. After go-live I traced a volume-related slowdown to the architecture; it became phase two, and I now elicit volume and concurrency expectations explicitly.</dd>
+      </dl>
 
-      <div class="cs-body">
+      <details class="full">
+        <summary>Read the full story</summary>
+        <div class="cs-body">
         <h3>The situation</h3>
         <p>
           The NGO ran an academic excellence award programme across its associative homes. Eligibility
@@ -333,9 +359,6 @@
           than left to emerge in production.
         </p>
 
-        <div class="mini">
-          <div><span class="n">10 days → 2 hours</span><span class="k">to produce results and rankings</span></div>
-        </div>
 
         <p style="margin-top:1.1rem; font-size:.95rem">
           The awards committee worked from one reliable source of student data instead of reconciling
@@ -343,24 +366,25 @@
           to the inputs that produced it, so the committee could see why a student placed where they
           did rather than take the list on trust.
         </p>
+        </div>
+      </details>
 
-        <p class="tools">
+      <p class="tools">
           <b>Approach &amp; tools</b>
           Elicitation (workshops, interviews, user observation, document analysis) · Business rules ·
           Functional specifications &amp; user stories · UML modelling · Requirements traceability ·
           Functional and integration test design · UAT coordination · Anomaly diagnosis and
           follow-through · Post-deployment support · End-user training · C#, SQL Server, Agile/Scrum
         </p>
-      </div>
     </article>
 
     <div class="more">
       <p>
-        <strong>Three more case studies</strong>
-        AI-assisted matching, ITIL 4 process work, and public-sector IT strategy — shorter reads,
-        showing depth in a single phase rather than the full lifecycle.
+        <strong>Three more projects</strong>
+        AI-assisted matching, ITIL 4 process work, and public-sector IT strategy — depth in a single
+        phase rather than the full lifecycle.
       </p>
-      <a class="btn primary" href="case-studies.html">More case studies →</a>
+      <a class="btn primary" href="projects.html">More projects →</a>
     </div>
   </div>
 </section>
